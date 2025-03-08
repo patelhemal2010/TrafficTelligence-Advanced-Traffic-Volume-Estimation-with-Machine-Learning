@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Traffic Volume Estimation</title>
+</head>
+
+
+<body background="https://cdn.vox-cdn.com/thumbor/voARJfEKvTp6iMSzW3ExPn06TDM=/0x78:3000x1766/1600x900/cdn.vox-cdn.com/uploads/chorus_image/image/44219366/72499026.0.0.jpg" text="black">
+
+ <div class="login">
+	<center><h1>Traffic Volume Estimation</h1></center>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+<h1>Please enter the following details</h1>
+
+
+</style></head>
+
+
+  <label for="holiday">holiday:</label>
+        <select id="holiday" name="holiday">
+            <option value=7>None</option>
+            <option value=1>Columbus Day</option>
+            <option value=10>Veterans Day</option>
+            <option value=9>Thanksgiving Day</option>
+            <option value=0>Christmas Day</option>
+            <option value=6>New Years Day</option>
+            <option value=11>Washingtons Birthday</option>
+            <option value=5>Memorial Day</option>
+            <option value=2>Independence Day</option>
+            <option value=8>State Fair</option>
+            <option value=3>Labor Day</option>
+            <option value=4>Martin Luther King Jr Day</option>
+            
+
+        </select> &nbsp;&nbsp;<br>
+    
+     
+<br>   <label>temp:</label>    
+      <input type="number"   name="temp" placeholder="temp	" required="required" /><br>
+      
+ <br>
+       <label>rain:</label>  
+      <input type="number"  min="0" max="1"  name="rain	" placeholder="rain" required="required" /><br>
+    
+<br>
+       <label>snow:</label>  
+      <input type="number" min="0" max="1"   name="snow	" placeholder="snow	" required="required" /><br>
+     
+
+<br>
+
+
+      <label for="weather">weather:</label>
+        <select id="weather" name="weather">
+            <option value=1>Clouds</option>
+            <option value=0>Clear</option>
+            <option value=6>Rain</option>
+            <option value=2>Drizzle</option>
+            <option value=5>Mist</option>
+            <option value=4>Haze</option>
+            <option value=3>Fog</option>
+            <option value=10>Thunderstorm</option>
+            <option value=8>Snow</option>
+            <option value=9>Squall</option>
+            <option value=7>Smoke</option><
+            
+
+        </select> &nbsp;&nbsp;<br>
+<br>
+       <label>year:</label>  
+      <input type="number" min="2012" max="2022"   name="year	" placeholder="year	" required="required" /><br>
+
+<br>
+            <label>month:</label>  
+      <input type="number" min="1" max="12"   name="month	" placeholder="month	" required="required" /><br>
+      
+<br>
+           <label>day:</label>  
+      <input type="number" min="1" max="31"   name="day	" placeholder="day	" required="required" /><br>  
+      
+<br>       
+       <label>hours:</label>  
+      <input type="number" min="0" max="24"   name="hours	" placeholder="hours	" required="required" /><br>  
+      
+<br>
+            <label>minutes:</label>  
+      <input type="number" min="0" max="60"   name="minutes	" placeholder="minutes	" required="required" /><br>  
+      
+<br>
+       <label>seconds:</label>  
+      <input type="number" min="0" max="60"   name="seconds	" placeholder="seconds	" required="required" /><br>  
+      
+<br>
+
+<br><br>
+
+
+<button type="submit" class="btn btn-primary btn-block btn-large" style="height:30px;width:200px">Predict</button>
+
+    </form>
+<br>
+   
+
+   {{ prediction_text }}
+
+
+  <br>
+  <br>
+  <img src="data:image/png;base64,{{url_3}}" alt="Submit Form" height="180" width="233" onerror="this.style.display='none'"/>
+  <img src="data:image/png;base64,{{url_1}}" alt="Submit Form" height="180" width="233" onerror="this.style.display='none'"/>
+  <img src="data:image/png;base64,{{url_4}}" alt="Submit Form" height="180" width="233" onerror="this.style.display='none'"/>
+  <br>
+  <br>
+  <img src="data:image/png;base64,{{url_2}}" alt="Submit Form" height="150" width="711" onerror="this.style.display='none'"/>
+  
+ </div>
+
+
+</body>
+</html>
